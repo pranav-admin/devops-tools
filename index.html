@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA | Premium Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="announcement">
+    ✦ FREE SHIPPING ON ORDERS ABOVE ₹1,999 ✦
+  </div>
+
+  <header class="navbar">
+    <a href="#home" class="logo">NOVA<span>.</span></a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Shop</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <button class="cart-button" id="cartBtn">
+      <span>Bag</span>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">THE NEW STANDARD</span>
+        <h1>Make room<br>for <span>better.</span></h1>
+        <p>
+          Thoughtfully selected essentials. Bold design.
+          Everyday products that feel anything but ordinary.
+        </p>
+        <a href="#products" class="primary-btn">
+          Explore collection <span>↗</span>
+        </a>
+
+        <div class="hero-stats">
+          <div><strong>500+</strong><small>Products</small></div>
+          <div><strong>4.9/5</strong><small>Customer rating</small></div>
+          <div><strong>24/7</strong><small>Online shopping</small></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-glow"></div>
+        <img
+          src="https://images.unsplash.com/photo-1505740420928-5e560c06d30d?auto=format&fit=crop&w=1000&q=85"
+          alt="Premium wireless headphones"
+          class="hero-image">
+        <div class="floating-card">
+          <span>✦ TRENDING NOW</span>
+          <strong>Studio Headphones</strong>
+          <p>Starting at ₹2,499</p>
+        </div>
+        <div class="hero-orbit"></div>
+      </div>
+    </section>
+
+    <section class="benefits" id="about">
+      <div>✦ Premium Quality</div>
+      <div>↗ Fast Delivery</div>
+      <div>♡ Easy Returns</div>
+      <div>✓ Secure Shopping</div>
+    </section>
+
+    <section class="products-section" id="products">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">CURATED FOR YOU</span>
+          <h2>Good things.<br><span>Great prices.</span></h2>
+        </div>
+        <p>Discover the pieces everyone is talking about.</p>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter active" data-category="all">All products</button>
+        <button class="filter" data-category="audio">Audio</button>
+        <button class="filter" data-category="fashion">Fashion</button>
+        <button class="filter" data-category="accessories">Accessories</button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+
+        <article class="product-card" data-category="audio">
+          <div class="product-image">
+            <span class="product-tag">BESTSELLER</span>
+            <button class="quick-add" data-id="1" aria-label="Add headphones to cart">+</button>
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30d?auto=format&fit=crop&w=700&q=80" alt="Wireless headphones" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-category">AUDIO</span>
+            <h3>Studio Wireless</h3>
+            <div class="product-bottom">
+              <strong>₹2,499</strong><span>★ 4.9</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="accessories">
+          <div class="product-image">
+            <span class="product-tag">NEW DROP</span>
+            <button class="quick-add" data-id="2" aria-label="Add watch to cart">+</button>
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80" alt="Minimal wristwatch" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-category">ACCESSORIES</span>
+            <h3>Minimal Timepiece</h3>
+            <div class="product-bottom">
+              <strong>₹3,299</strong><span>★ 4.8</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="fashion">
+          <div class="product-image">
+            <span class="product-tag">POPULAR</span>
+            <button class="quick-add" data-id="3" aria-label="Add sneakers to cart">+</button>
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80" alt="Red athletic sneakers" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-category">FASHION</span>
+            <h3>Street Runner</h3>
+            <div class="product-bottom">
+              <strong>₹3,799</strong><span>★ 4.7</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="accessories">
+          <div class="product-image">
+            <span class="product-tag">ESSENTIAL</span>
+            <button class="quick-add" data-id="4" aria-label="Add backpack to cart">+</button>
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=80" alt="Modern travel backpack" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-category">ACCESSORIES</span>
+            <h3>Everyday Backpack</h3>
+            <div class="product-bottom">
+              <strong>₹1,899</strong><span>★ 4.8</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="audio">
+          <div class="product-image">
+            <button class="quick-add" data-id="5" aria-label="Add camera to cart">+</button>
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=700&q=80" alt="Digital camera" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-category">TECH</span>
+            <h3>Creator Camera</h3>
+            <div class="product-bottom">
+              <strong>₹8,499</strong><span>★ 4.9</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="fashion">
+          <div class="product-image">
+            <button class="quick-add" data-id="6" aria-label="Add sunglasses to cart">+</button>
+            <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=700&q=80" alt="Modern sunglasses" loading="lazy">
+          </div>
+          <div class="product-info">
+            <span class="product-category">FASHION</span>
+            <h3>Urban Shades</h3>
+            <div class="product-bottom">
+              <strong>₹1,299</strong><span>★ 4.6</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="promo">
+      <div>
+        <span class="eyebrow">A LITTLE SOMETHING EXTRA</span>
+        <h2>Your next favourite<br>thing is <span>waiting.</span></h2>
+        <a href="#products" class="primary-btn">Shop the collection ↗</a>
+      </div>
+      <div class="promo-symbol">N<span>.</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo">NOVA<span>.</span></a>
+    <p>Designed for everyday. Made to stand out.</p>
+    <small>© 2026 NOVA Store. Demo storefront.</small>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="cart-overlay" id="cartOverlay">
+    <aside class="cart-panel">
+      <div class="cart-heading">
+        <h2>Your bag <span id="cartTitleCount">(0)</span></h2>
+        <button id="closeCart" class="close-cart" aria-label="Close cart">×</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+        <button class="checkout-btn" id="checkoutBtn">Continue to checkout ↗</button>
+        <p>Shipping calculated at checkout.</p>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
