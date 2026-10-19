@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f7f4">
   <title>NOVA | Premium Store</title>
+
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -23,10 +26,18 @@
       <a href="#about">About</a>
     </nav>
 
-    <button class="cart-button" id="cartBtn">
-      <span>Bag</span>
-      <span class="cart-count" id="cartCount">0</span>
-    </button>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle"
+        aria-label="Switch to dark mode" aria-pressed="false"
+        title="Toggle dark mode">
+        <span id="themeIcon">☾</span>
+      </button>
+
+      <button class="cart-button" id="cartBtn">
+        <span>Bag</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
   </header>
 
   <main>
@@ -38,6 +49,7 @@
           Thoughtfully selected essentials. Bold design.
           Everyday products that feel anything but ordinary.
         </p>
+
         <a href="#products" class="primary-btn">
           Explore collection <span>↗</span>
         </a>
@@ -55,11 +67,13 @@
           src="https://images.unsplash.com/photo-1505740420928-5e560c06d30d?auto=format&fit=crop&w=1000&q=85"
           alt="Premium wireless headphones"
           class="hero-image">
+
         <div class="floating-card">
           <span>✦ TRENDING NOW</span>
           <strong>Studio Headphones</strong>
           <p>Starting at ₹2,499</p>
         </div>
+
         <div class="hero-orbit"></div>
       </div>
     </section>
@@ -98,9 +112,7 @@
           <div class="product-info">
             <span class="product-category">AUDIO</span>
             <h3>Studio Wireless</h3>
-            <div class="product-bottom">
-              <strong>₹2,499</strong><span>★ 4.9</span>
-            </div>
+            <div class="product-bottom"><strong>₹2,499</strong><span>★ 4.9</span></div>
           </div>
         </article>
 
@@ -113,9 +125,7 @@
           <div class="product-info">
             <span class="product-category">ACCESSORIES</span>
             <h3>Minimal Timepiece</h3>
-            <div class="product-bottom">
-              <strong>₹3,299</strong><span>★ 4.8</span>
-            </div>
+            <div class="product-bottom"><strong>₹3,299</strong><span>★ 4.8</span></div>
           </div>
         </article>
 
@@ -128,9 +138,7 @@
           <div class="product-info">
             <span class="product-category">FASHION</span>
             <h3>Street Runner</h3>
-            <div class="product-bottom">
-              <strong>₹3,799</strong><span>★ 4.7</span>
-            </div>
+            <div class="product-bottom"><strong>₹3,799</strong><span>★ 4.7</span></div>
           </div>
         </article>
 
@@ -143,9 +151,7 @@
           <div class="product-info">
             <span class="product-category">ACCESSORIES</span>
             <h3>Everyday Backpack</h3>
-            <div class="product-bottom">
-              <strong>₹1,899</strong><span>★ 4.8</span>
-            </div>
+            <div class="product-bottom"><strong>₹1,899</strong><span>★ 4.8</span></div>
           </div>
         </article>
 
@@ -157,9 +163,7 @@
           <div class="product-info">
             <span class="product-category">TECH</span>
             <h3>Creator Camera</h3>
-            <div class="product-bottom">
-              <strong>₹8,499</strong><span>★ 4.9</span>
-            </div>
+            <div class="product-bottom"><strong>₹8,499</strong><span>★ 4.9</span></div>
           </div>
         </article>
 
@@ -171,9 +175,7 @@
           <div class="product-info">
             <span class="product-category">FASHION</span>
             <h3>Urban Shades</h3>
-            <div class="product-bottom">
-              <strong>₹1,299</strong><span>★ 4.6</span>
-            </div>
+            <div class="product-bottom"><strong>₹1,299</strong><span>★ 4.6</span></div>
           </div>
         </article>
 
@@ -199,7 +201,7 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <div class="cart-overlay" id="cartOverlay">
-    <aside class="cart-panel">
+    <aside class="cart-panel" role="dialog" aria-modal="true" aria-label="Shopping cart">
       <div class="cart-heading">
         <h2>Your bag <span id="cartTitleCount">(0)</span></h2>
         <button id="closeCart" class="close-cart" aria-label="Close cart">×</button>
@@ -207,7 +209,7 @@
       <div id="cartItems" class="cart-items"></div>
       <div class="cart-footer">
         <div class="cart-total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
-        <button class="checkout-btn" id="checkoutBtn">Continue to checkout ↗</button>
+        <button class="checkout-btn" id="checkoutBtn" disabled>Continue to checkout ↗</button>
         <p>Shipping calculated at checkout.</p>
       </div>
     </aside>
